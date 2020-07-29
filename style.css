@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #333150;
+  background-image: -webkit-image-set(url(images/bg_9b9dcb65ff.png) 1x, url(images/bg_9b9dcb65ff.png) 2x);
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #999;
+  transition: all 0.3s ease;
+}
+a:hover {
+  transition: all 0.3s ease;
+  color: #5079d9;
+}
+.todos {
+  margin: calc(50vh - 210px) auto;
+  height: 400px;
+  width: 600px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.185);
+  border: 1px solid rgba(87, 87, 87, 0.15);
+  box-shadow: 0 9px 30px -6px rgba(0, 0, 0, 0.2), 0 18px 20px -10px rgba(0, 0, 0, 0.04), 0 18px 20px -10px rgba(0, 0, 0, 0.04), 0 10px 20px -10px rgba(0, 0, 0, 0.04);
+}
+.todos header {
+  background-color: royalblue;
+  background: url(https://static.smartisanos.cn/account.common/img/dialog-gray-bg_42c40b3eb6.png) #fff bottom repeat-x;
+  height: 50px;
+  color: #5f7ed7;
+  line-height: 50px;
+  padding: 0 20px;
+}
+.todos header h3 {
+  float: left;
+}
+.todos header a {
+  float: right;
+  color: #5f7ed7;
+  font-size: 25px;
+}
+.todos .body {
+  border-top: 1px solid #dadada;
+  height: calc(100% - 100px);
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  background: url(https://static.smartisanos.cn/account.common/img/dialog-gray-bg_42c40b3eb6.png) #fff bottom repeat-x;
+}
+.todos .body ::-webkit-scrollbar {
+  width: 10px;
+}
+.todos .body ul {
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+.todos .body ul li {
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 3px 5px -4px rgba(0, 0, 0, 0.4) inset, -1px 0 3px -2px rgba(0, 0, 0, 0.1) inset;
+  border: #ccc solid 1px;
+  border-radius: 6px;
+  opacity: 0.88;
+  font-size: 18px;
+  height: 46px;
+  line-height: 46px;
+  position: relative;
+  transition: 0.3s ease-in;
+  margin-top: 20px;
+}
+.todos .body ul li .icon {
+  border-radius: 6px 0 0 6px;
+  border-right: solid 1px #ccc;
+  box-shadow: 1px 0 3px -1px rgba(0, 0, 0, 0.1);
+  float: left;
+  height: 46px;
+  width: 46px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  line-height: 46px;
+  vertical-align: top;
+}
+.todos .body ul li .icon span {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url(images/checkbox_f49f6e4acf.png) no-repeat;
+  background-position: 0 -18px;
+}
+.todos .body ul li .icon.done span {
+  background-position: 0 1px;
+}
+.todos .body ul li .text {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 491px;
+  text-align: center;
+  position: relative;
+  left: 3px;
+  font-size: 16px;
+  cursor: default;
+}
+.todos .body ul li .text.done input {
+  text-decoration: line-through;
+  color: #33333350;
+}
+.todos .body ul li input {
+  outline: none;
+  display: block;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0);
+  background: url(../img/blank_56398e76be.gif) \9;
+  border: none;
+  color: #5f7ed7;
+  font-size: 16px;
+  height: 34px;
+  padding: 5px 15px;
+  padding-right: 40px;
+  width: 100%;
+  position: relative;
+}
+.todos .body ul li .del {
+  position: absolute;
+  right: 14px;
+  top: calc(50% - 11px);
+  color: red;
+  font-size: 25px;
+  background: url(images/del.png) 0 0 no-repeat;
+  background-position: 0px 0px;
+  background-size: 100% auto;
+  width: 22px;
+  height: 22px;
+}
+.todos .body ul li:hover {
+  border: #5f7ed7 solid 1px;
+  opacity: 1;
+}
+.todos .body ul li:hover .del {
+  background-position: 0px -33px;
+}
+.todos .bottom {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #dadada;
+  background-color: salmon;
+  background: url(https://static.smartisanos.cn/account.common/img/dialog-gray-bg_42c40b3eb6.png) #fff bottom repeat-x;
+  height: 50px;
+  text-align: center;
+  padding: 0 20px;
+}
+.todos .bottom a {
+  font-size: 16px;
+  border-radius: 6px;
+  color: white;
+  padding: 3px 16px;
+  background: #5f7ed7;
+  background: linear-gradient(#6f97e5, #527ed9);
+  box-shadow: inset 0 1px 2px #7ea1e8;
+  color: #fff;
+  text-shadow: #4f70b3 0 -1px 0;
+}
+.todos .bottom .center {
+  display: flex;
+  width: 260px;
+  margin: auto;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.todos .bottom .center a {
+  flex: 1;
+  margin: auto;
+  border-radius: 0;
+}
+.todos .bottom .center a.active {
+  background: #5f7ed7;
+  background: linear-gradient(#5477be, #426dc4);
+  box-shadow: inset 0 0px 5px #3c517c;
+}
